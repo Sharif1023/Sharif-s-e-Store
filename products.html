@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products - Shariful's Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body class="bg-gray-800 text-gray-800">
+  
+<!-- Navbar -->
+  <header class="bg-gray-800 text-white py-4">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Shariful's Store</h1>
+      <nav class="space-x-4 flex items-center">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="text-yellow-400">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <!-- Cart Icon -->
+        <button onclick="openCart()" class="ml-4 bg-green-600 px-3 py-1 rounded hover:bg-green-700">
+          Cart (<span id="cartCount">0</span>)
+        </button>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Product Grid -->
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 text-center text-white">Our Products</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Product 1 -->
+<!-- Product 1 with Main Image and Multiple Thumbnails -->
+<!-- Product 1 with clickable thumbnails to change main image -->
+<div class="bg-white rounded-lg shadow p-4 text-center">
+  <img
+    id="mainImage-SmartCap"
+    src="cap1.jpg"
+    class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
+    alt="Smart Cap"
+  />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <img
+      src="cap1.jpg"
+      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      onclick="changeMainImage('SmartCap', 'cap1.jpg', this)"
+    />
+    <img
+      src="cap3.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartCap', 'cap3.jpeg', this)"
+    />
+    <img
+      src="cap4.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartCap', 'cap4.jpeg', this)"
+    />
+  </div>
+
+  <h3 class="text-xl font-semibold">Smart Cap</h3>
+  <p class="text-gray-600">Price: $99</p>
+  <button
+    onclick='openModal({ name: "Smart Cap", price: 99, description: "A headwear accessory that provides shade and adds style." })'
+    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    View Details
+  </button>
+</div>
+
+
+
+
+<!-- Product 2 -->
+<div class="bg-white rounded-lg shadow p-4 text-center">
+  <img
+    id="mainImage-SmartShoes"
+    src="shoes1.jpg"
+    class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
+    alt="Smart Shoes"
+  />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <img
+      src="shoes1.jpg"
+      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      onclick="changeMainImage('SmartShoes', 'shoes1.jpg', this)"
+    />
+    <img
+      src="shoes2.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartShoes', 'shoes2.jpeg', this)"
+    />
+    <img
+      src="shoes3.webp"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartShoes', 'shoes3.webp', this)"
+    />
+  </div>
+
+  <h3 class="text-xl font-semibold">Smart Shoes</h3>
+  <p class="text-gray-600">Price: $99</p>
+  <button
+    onclick='openModal({ name: "Smart Shoes", price: 99, description: "Footwear designed for protection, comfort, and fashion." })'
+    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    View Details
+  </button>
+</div>
+
+<!-- Product 3 -->
+<div class="bg-white rounded-lg shadow p-4 text-center">
+  <img
+    id="mainImage-SmartWallet"
+    src="wallet.jpg"
+    class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
+    alt="Smart Wallet"
+  />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <img
+      src="wallet2.jpeg"
+      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      onclick="changeMainImage('SmartWallet', 'wallet2.jpeg', this)"
+    />
+    <img
+      src="wallet3.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartWallet', 'wallet3.jpeg', this)"
+    />
+    <img
+      src="wallet4.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartWallet', 'wallet4.jpeg', this)"
+    />
+  </div>
+
+  <h3 class="text-xl font-semibold">Smart Wallet</h3>
+  <p class="text-gray-600">Price: $99</p>
+  <button
+    onclick='openModal({ name: "Smart Wallet", price: 99, description: " A compact case for carrying money, cards, and IDs" })'
+    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    View Details
+  </button>
+</div>
+
+<!-- Product 4 -->
+<div class="bg-white rounded-lg shadow p-4 text-center">
+  <img
+    id="mainImage-smartwatch"
+    src="watch.jpg"
+    class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
+    alt="Smart Watch"
+  />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <img
+      src="watch2.jpeg"
+      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      onclick="changeMainImage('smartwatch', 'watch2.jpeg', this)"
+    />
+    <img
+      src="watch3.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('smartwatch', 'watch3.jpeg', this)"
+    />
+    <img
+      src="watch4.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('smartwatch', 'watch4.jpeg', this)"
+    />
+  </div>
+
+  <h3 class="text-xl font-semibold">Smart Watch</h3>
+  <p class="text-gray-600">Price: $99</p>
+  <button
+    onclick='openModal({ name: "Smart Watch", price: 99, description: "A modern smartwatch with fitness tracking, heart rate monitor, and notifications." })'
+    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    View Details
+  </button>
+</div>
+
+<!-- Product 5 -->
+<div class="bg-white rounded-lg shadow p-4 text-center">
+  <img
+    id="mainImage-SmartBalt"
+    src="balt1.jpg"
+    class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
+    alt="Smart Balt"
+  />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <img
+      src="balt1.jpg"
+      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      onclick="changeMainImage('SmartBalt', 'balt1.jpg', this)"
+    />
+    <img
+      src="balt3.jpg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartBalt', 'balt3.jpg', this)"
+    />
+    <img
+      src="balt4.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartBalt', 'balt4.jpeg', this)"
+    />
+  </div>
+
+  <h3 class="text-xl font-semibold">Smart Balt</h3>
+  <p class="text-gray-600">Price: $99</p>
+  <button
+    onclick='openModal({ name: "Smart Balt", price: 99, description: " A strap worn around the waist to hold up pants or for style." })'
+    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    View Details
+  </button>
+</div>
+
+<!-- Product 6 -->
+<div class="bg-white rounded-lg shadow p-4 text-center">
+  <img
+    id="mainImage-SmartSunglasses"
+    src="subglass1.jpg"
+    class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
+    alt="Smart Sunglasses"
+  />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <img
+      src="subglass1.jpg"
+      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      onclick="changeMainImage('SmartSunglasses', 'subglass1.jpg', this)"
+    />
+    <img
+      src="sunglass2.webp"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartSunglasses', 'sunglass2.webp', this)"
+    />
+    <img
+      src="sunglass3.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartSunglasses', 'sunglass3.jpeg', this)"
+    />
+  </div>
+
+  <h3 class="text-xl font-semibold">Smart Sunglasses</h3>
+  <p class="text-gray-600">Price: $99</p>
+  <button
+    onclick='openModal({ name: "Smart Sunglasses", price: 99, description: " Eyewear that protects eyes from sunlight and adds flair." })'
+    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    View Details
+  </button>
+</div>
+
+     <!-- Product 7 -->
+  <div class="bg-white rounded-lg shadow p-4 text-center">
+  <img
+    id="mainImage-SmartTie"
+    src="tie (2).jpeg"
+    class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
+    alt="Smart Tie"
+  />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <img
+      src="tie (2).jpeg"
+      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      onclick="changeMainImage('SmartTie', 'tie (2).jpeg', this)"
+    />
+    <img
+      src="tie3(2).jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartTie', 'tie3(2).jpeg', this)"
+    />
+    <img
+      src="tie(2).jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartTie', 'tie(2).jpeg', this)"
+    />
+  </div>
+
+  <h3 class="text-xl font-semibold">Smart Tie</h3>
+  <p class="text-gray-600">Price: $99</p>
+  <button
+    onclick='openModal({ name: "Smart Tie", price: 99, description: "A neckwear piece for formal or professional attire." })'
+    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    View Details
+  </button>
+</div>
+
+   <!-- Product 8 -->
+  <div class="bg-white rounded-lg shadow p-4 text-center">
+  <img
+    id="mainImage-SmartBeslet"
+    src="beslet2.jpeg"
+    class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
+    alt="Smart Beslet"
+  />
+
+  <div class="flex justify-center gap-2 mb-4">
+    <img
+      src="beslet2.jpeg"
+      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      onclick="changeMainImage('SmartBeslet', 'beslet2.jpeg', this)"
+    />
+    <img
+      src="beslet3.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartBeslet', 'beslet3.jpeg', this)"
+    />
+    <img
+      src="beslet4.jpeg"
+      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      onclick="changeMainImage('SmartBeslet', 'beslet4.jpeg', this)"
+    />
+  </div>
+
+  <h3 class="text-xl font-semibold">Smart Beslet</h3>
+  <p class="text-gray-600">Price: $99</p>
+  <button
+    onclick='openModal({ name: "Smart Beslet", price: 99, description: "A decorative band worn on the wrist for fashion or meaning." })'
+    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+  >
+    View Details
+  </button>
+</div>
+
+        <!-- Each Product -->
+        <!-- ... SAME PRODUCT CARDS AS BEFORE ... -->
+        <!-- Use your 6 existing product cards here -->
+
+
+    </div>
+  </section>
+
+  <!-- Product Detail Modal -->
+  
+  <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <div class="flex justify-between items-center mb-4">
+        <h3 id="modalTitle" class="text-xl font-bold">Product Name</h3>
+        <button onclick="closeModal()" class="text-red-600 text-xl">&times;</button>
+      </div>
+      <p id="modalPrice" class="mb-2">Price: $0</p>
+      <p id="productDescription" class="text-gray-600 mb-4"></p>
+      <label class="block mb-2 font-medium">Quantity</label>
+      <input id="quantity" type="number" min="1" value="1" class="w-full border px-3 py-2 rounded mb-4">
+      <label class="block mb-2 font-medium">Payment Method</label>
+      <select id="paymentMethod" class="w-full border px-3 py-2 rounded mb-4">
+        <option value="card">Card</option>
+        <option value="bkash">bKash</option>
+        <option value="nagad">Nagad</option>
+      </select>
+      <div class="flex space-x-2">
+        <button onclick="orderProduct()" class="w-1/2 bg-green-600 text-white py-2 rounded hover:bg-green-700">Order Now</button>
+        <button onclick="addToCart()" class="w-1/2 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-xl max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold">Your Cart</h3>
+        <button onclick="closeCart()" class="text-red-600 text-xl">&times;</button>
+      </div>
+      <ul id="cartItems" class="divide-y divide-gray-300 mb-4"></ul>
+      <p class="font-semibold text-lg">Total: $<span id="cartTotal">0</span></p>
+      <button onclick="checkout()" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full">Checkout</button>
+    </div>
+  </div>
+
+<footer class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 gap-10 text-center lg:text-left">
+
+    <!-- Branding -->
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Shariful Islam</h2>
+      <p class="text-gray-400">Crafting web experiences with passion and precision.</p>
+      <p class="mt-3 text-sm text-gray-500">&copy; 2025 All rights reserved.</p>
+    </div>
+
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-xl font-semibold mb-3">Contact</h3>
+      <ul class="text-sm text-gray-400 space-y-2">
+        <li><i class="fas fa-map-marker-alt mr-2"></i>123 Web Street, Dhaka, Bangladesh</li>
+        <li><i class="fas fa-phone-alt mr-2"></i>+880 1234 567 890</li>
+        <li><i class="fas fa-envelope mr-2"></i>shariful@example.com</li>
+      </ul>
+    </div>
+
+    <!-- Social Icons -->
+  <div class="mt-10 text-center text-2xl space-x-5">
+    <a href="https://facebook.com" target="_blank" class="hover:text-blue-500 transition"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com" target="_blank" class="hover:text-blue-300 transition"><i class="fab fa-linkedin-in"></i></a>
+    <a href="mailto:you@example.com" class="hover:text-red-400 transition"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  </div>
+
+</footer>
+
+
+  <!-- Scripts
+ -->
+    <script>
+  let cart = [];
+  let currentProduct = { name: '', price: 0, description: '' };
+
+ function openModal(product) {
+  currentProduct = product;
+  document.getElementById('modalTitle').innerText = product.name;
+  document.getElementById('modalPrice').innerText = 'Price: $' + product.price;
+  document.getElementById('productDescription').innerText = product.description;
+  document.getElementById('quantity').value = 1;
+  document.getElementById('productModal').classList.remove('hidden');
+}
+
+// ... rest of your code ...
+
+    function closeModal() {
+      document.getElementById('productModal').classList.add('hidden');
+    }
+
+    function orderProduct() {
+      const qty = document.getElementById('quantity').value;
+      const method = document.getElementById('paymentMethod').value;
+      alert(`✅ Order Placed\nProduct: ${currentProduct.name}\nQuantity: ${qty}\nPayment: ${method}`);
+      closeModal();
+    }
+
+    function addToCart() {
+      const qty = parseInt(document.getElementById('quantity').value);
+      const existing = cart.find(item => item.name === currentProduct.name);
+      if (existing) {
+        existing.qty += qty;
+      } else {
+        cart.push({ ...currentProduct, qty });
+      }
+      updateCartCount();
+      alert("🛒 Added to cart!");
+      closeModal();
+    }
+
+    function updateCartCount() {
+      document.getElementById("cartCount").innerText = cart.reduce((sum, item) => sum + item.qty, 0);
+    }
+
+    function openCart() {
+      const list = document.getElementById("cartItems");
+      list.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.qty * item.price;
+        total += itemTotal;
+
+        list.innerHTML += `
+          <li class="flex justify-between items-center py-2">
+            <div>
+              <p class="font-semibold">${item.name}</p>
+              <p class="text-sm text-gray-600">Qty: ${item.qty} × $${item.price}</p>
+            </div>
+            <div>
+              <p class="font-bold">$${itemTotal}</p>
+              <button onclick="removeFromCart(${index})" class="text-red-500 text-sm">Remove</button>
+            </div>
+          </li>
+        `;
+      });
+
+      document.getElementById("cartTotal").innerText = total;
+      document.getElementById("cartModal").classList.remove("hidden");
+    }
+
+    function closeCart() {
+      document.getElementById("cartModal").classList.add("hidden");
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartCount();
+      openCart();
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("🛒 Cart is empty!");
+        return;
+      }
+      alert("✅ Order Placed! Thank you.");
+      cart = [];
+      updateCartCount();
+      closeCart();
+    }
+
+
+  function changeMainImage(productId, imgSrc, thumbnailElement) {
+  const mainImage = document.getElementById(`mainImage-${productId}`);
+  mainImage.src = imgSrc;
+
+  // Remove blue border from all sibling thumbnails
+  const thumbnails = thumbnailElement.parentElement.querySelectorAll('img');
+  thumbnails.forEach(thumb => thumb.classList.remove('border-blue-600', 'border-2'));
+  thumbnails.forEach(thumb => thumb.classList.add('border-transparent'));
+
+  // Highlight clicked thumbnail
+  thumbnailElement.classList.remove('border-transparent');
+  thumbnailElement.classList.add('border-blue-600', 'border-2');
+}
+
+  </script>
+<!-- Image Gallery Modal -->
+<div id="galleryModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+  <div class="bg-white p-4 rounded shadow-lg max-w-3xl w-full relative">
+    <button onclick="closeGalleryModal()" class="absolute top-2 right-2 text-black text-2xl">&times;</button>
+    <img id="galleryMainImage" src="" class="w-full h-[400px] object-contain mb-4 rounded">
+    <div id="galleryThumbnails" class="flex justify-center gap-2 flex-wrap"></div>
+  </div>
+</div>
+
+<!-- Always Visible Back to Top Button -->
+<button id="backToTopBtn"
+        class="fixed bottom-10 Left bg-gray-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700 transition z-40">
+  ↑ Top
+</button>
+
+<script>
+  // Scroll to top on button click
+  document.getElementById("backToTopBtn").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>
+
+
+
