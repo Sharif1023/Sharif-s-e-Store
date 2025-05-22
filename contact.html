@@ -2,26 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact - Shariful's Store</title>
+  <title>Contact - Sharif's Store</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body class="bg-gray-300 text-gray-800">
 
-  <!-- Navbar -->
+  <!-- Navbar py-20 pt-24 -->
+<!-- Navbar -->
 <header class="fixed top-0 left-0 w-full bg-gray-800 text-white py-4 z-50 shadow-md">
   <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Shariful's Store</h1>
-    <nav class="space-x-4">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="text-yellow-400">Contact</a>
-      <!-- Cart Icon -->
-        <button onclick="openCart()" class="ml-4 bg-green-600 px-3 py-1 rounded hover:bg-green-700">
-          Cart (<span id="cartCount">0</span>)
-        </button>
+    <!-- Site Name -->
+    <h1 class="text-2xl font-bold">Sharunduu's Store</h1>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-4 items-center">
+      <a href="index.html" class="hover:text-yellow-300">Home</a>
+      <a href="products.html" class="hover:text-yellow-300">Products</a>
+      <a href="about.html" class="hover:text-yellow-400">About</a>
+      <a href="contact.html" class="text-yellow-300">Contact</a>
+      <button onclick="openCart()" class="ml-4 bg-green-600 px-3 py-1 rounded hover:bg-green-700">
+        Cart (<span id="cartCount">0</span>)
+      </button>
     </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuToggle" class="md:hidden text-white text-2xl focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Links -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col bg-gray-700 px-6 py-4 space-y-3">
+    <a href="index.html" class="block hover:text-yellow-300">Home</a>
+    <a href="products.html" class="block hover:text-yellow-300">Products</a>
+    <a href="about.html" class="block hover:text-yellow-400">About</a>
+    <a href="contact.html" class="block text-yellow-300">Contact</a>
+    <button onclick="openCart()" class="w-full bg-green-600 px-3 py-2 rounded hover:bg-green-700 text-left">
+      Cart (<span id="cartCountMobile">0</span>)
+    </button>
   </div>
 </header>
 
@@ -53,9 +72,9 @@
     <div>
       <h3 class="text-xl font-semibold mb-3">Contact</h3>
       <ul class="text-sm text-gray-400 space-y-2">
-        <li><i class="fas fa-map-marker-alt mr-2"></i>123 Web Street, Dhaka, Bangladesh</li>
-        <li><i class="fas fa-phone-alt mr-2"></i>+880 1234 567 890</li>
-        <li><i class="fas fa-envelope mr-2"></i>shariful@example.com</li>
+        <li><i class="fas fa-map-marker-alt mr-2"></i>Chawkbazar, Chattagram, Bangladesh</li>
+        <li><i class="fas fa-phone-alt mr-2"></i>+880 1316 785 389</li>
+        <li><i class="fas fa-envelope mr-2"></i>sharifislam02001@gmail.com</li>
       </ul>
     </div>
 
@@ -72,7 +91,7 @@
     </div>
     <!-- Social Icons -->
   <div class="mt-10 text-center text-2xl space-x-5">
-    <a href="https://facebook.com" target="_blank" class="hover:text-blue-500 transition"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://facebook.com"  class="hover:text-blue-500 transition"><i class="fab fa-facebook-f"></i></a>
     <a href="https://twitter.com" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
     <a href="https://linkedin.com" target="_blank" class="hover:text-blue-300 transition"><i class="fab fa-linkedin-in"></i></a>
     <a href="mailto:you@example.com" class="hover:text-red-400 transition"><i class="fas fa-envelope"></i></a>
@@ -135,7 +154,7 @@
       setTimeout(() => {
         const reply = document.createElement("div");
         reply.className = "bg-gray-200 p-2 rounded-lg text-left";
-        reply.textContent = "Shariful: Thanks for your message!";
+        reply.textContent = "Thanks for your message! Please wait for reply...";
         chatMessages.appendChild(reply);
         chatMessages.scrollTop = chatMessages.scrollHeight;
       }, 1000);
@@ -161,6 +180,23 @@
   });
 </script>
 
+
+<script>
+  // Mobile menu toggle
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Sync cart count in mobile menu (optional)
+  const cartCount = document.getElementById('cartCount');
+  const cartCountMobile = document.getElementById('cartCountMobile');
+  const observer = new MutationObserver(() => {
+    cartCountMobile.textContent = cartCount.textContent;
+  });
+  observer.observe(cartCount, { childList: true });
+</script>
 
 </body>
 </html>
