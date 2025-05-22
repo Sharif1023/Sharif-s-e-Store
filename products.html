@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Products - Shariful's Store</title>
+  <title>Products - Sharif's Store</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -10,44 +10,65 @@
 <body class="bg-gray-800 text-gray-800">
   
 <!-- Navbar -->
-  <header class="bg-gray-800 text-white py-4">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Shariful's Store</h1>
-      <nav class="space-x-4 flex items-center">
-        <a href="index.html">Home</a>
-        <a href="products.html" class="text-yellow-400">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <!-- Cart Icon -->
-        <button onclick="openCart()" class="ml-4 bg-green-600 px-3 py-1 rounded hover:bg-green-700">
-          Cart (<span id="cartCount">0</span>)
-        </button>
-      </nav>
-    </div>
-  </header>
+<header class="fixed top-0 left-0 w-full bg-gray-800 text-white py-4 z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <!-- Site Name -->
+    <h1 class="text-2xl font-bold">Sharunduu's Store</h1>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-4 items-center">
+      <a href="index.html" class="hover:text-yellow-300">Home</a>
+      <a href="products.html" class="text-yellow-300">Products</a>
+      <a href="about.html" class="hover:text-yellow-400">About</a>
+      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+      <button onclick="openCart()" class="ml-4 bg-green-600 px-3 py-1 rounded hover:bg-green-700">
+        Cart (<span id="cartCount">0</span>)
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuToggle" class="md:hidden text-white text-2xl focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Links -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col bg-gray-700 px-6 py-4 space-y-3">
+    <a href="index.html" class="block hover:text-yellow-300">Home</a>
+    <a href="products.html" class="block text-yellow-300">Products</a>
+    <a href="about.html" class="block hover:text-yellow-400">About</a>
+    <a href="contact.html" class="block hover:text-yellow-300">Contact</a>
+    <button onclick="openCart()" class="w-full bg-green-600 px-3 py-2 rounded hover:bg-green-700 text-left">
+      Cart (<span id="cartCountMobile">0</span>)
+    </button>
+  </div>
+</header>
 
 
   <!-- Product Grid -->
-  <section class="py-10">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-8 text-center text-white">Our Products</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <!-- Product Grid -->
+<section class="pt-28 pb-10 bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center text-white">Our Products</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Product Cards Go Here -->
+
     <!-- Product 1 -->
-<!-- Product 1 with Main Image and Multiple Thumbnails -->
+
 <!-- Product 1 with clickable thumbnails to change main image -->
 <div class="bg-white rounded-lg shadow p-4 text-center">
   <img
     id="mainImage-SmartCap"
-    src="cap1.jpg"
+    src="caps1.jpeg"
     class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
     alt="Smart Cap"
   />
 
   <div class="flex justify-center gap-2 mb-4">
     <img
-      src="cap1.jpg"
+      src="caps1.jpeg"
       class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
-      onclick="changeMainImage('SmartCap', 'cap1.jpg', this)"
+      onclick="changeMainImage('SmartCap', 'caps1.jpeg', this)"
     />
     <img
       src="cap3.jpeg"
@@ -78,26 +99,26 @@
 <div class="bg-white rounded-lg shadow p-4 text-center">
   <img
     id="mainImage-SmartShoes"
-    src="shoes1.jpg"
+    src="shoess.jpg"
     class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
     alt="Smart Shoes"
   />
 
   <div class="flex justify-center gap-2 mb-4">
     <img
-      src="shoes1.jpg"
+      src="shoess.jpg"
       class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
-      onclick="changeMainImage('SmartShoes', 'shoes1.jpg', this)"
+      onclick="changeMainImage('SmartShoes', 'shoess.jpg', this)"
     />
     <img
-      src="shoes2.jpeg"
+      src="shoess2.jpeg"
       class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
-      onclick="changeMainImage('SmartShoes', 'shoes2.jpeg', this)"
+      onclick="changeMainImage('SmartShoes', 'shoess2.jpeg', this)"
     />
     <img
-      src="shoes3.webp"
+      src="shoess4.jpg"
       class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
-      onclick="changeMainImage('SmartShoes', 'shoes3.webp', this)"
+      onclick="changeMainImage('SmartShoes', 'shoess4.jpg', this)"
     />
   </div>
 
@@ -115,7 +136,7 @@
 <div class="bg-white rounded-lg shadow p-4 text-center">
   <img
     id="mainImage-SmartWallet"
-    src="wallet.jpg"
+    src="wallets1.jpg"
     class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
     alt="Smart Wallet"
   />
@@ -152,7 +173,7 @@
 <div class="bg-white rounded-lg shadow p-4 text-center">
   <img
     id="mainImage-smartwatch"
-    src="watch.jpg"
+    src="watch2.jpeg"
     class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
     alt="Smart Watch"
   />
@@ -226,21 +247,21 @@
 <div class="bg-white rounded-lg shadow p-4 text-center">
   <img
     id="mainImage-SmartSunglasses"
-    src="subglass1.jpg"
+    src="sunglasss2.webp"
     class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
     alt="Smart Sunglasses"
   />
 
   <div class="flex justify-center gap-2 mb-4">
     <img
-      src="subglass1.jpg"
+      src="sunglass2.webp"
       class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
-      onclick="changeMainImage('SmartSunglasses', 'subglass1.jpg', this)"
+      onclick="changeMainImage('SmartSunglasses', 'sunglass2.webp', this)"
     />
     <img
-      src="sunglass2.webp"
+      src="sunglasss1.jpg"
       class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
-      onclick="changeMainImage('SmartSunglasses', 'sunglass2.webp', this)"
+      onclick="changeMainImage('SmartSunglasses', 'sunglasss1.jpg', this)"
     />
     <img
       src="sunglass3.jpeg"
@@ -263,26 +284,26 @@
   <div class="bg-white rounded-lg shadow p-4 text-center">
   <img
     id="mainImage-SmartTie"
-    src="tie (2).jpeg"
+    src="ties1.jpeg"
     class="rounded-lg hover:scale-105 transition-transform mx-auto mb-4 w-full h-70 object-cover"
     alt="Smart Tie"
   />
 
   <div class="flex justify-center gap-2 mb-4">
     <img
-      src="tie (2).jpeg"
+      src="ties1.jpeg"
       class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
-      onclick="changeMainImage('SmartTie', 'tie (2).jpeg', this)"
+      onclick="changeMainImage('SmartTie', 'ties1.jpeg', this)"
     />
     <img
-      src="tie3(2).jpeg"
+      src="ties2.jpg"
       class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
-      onclick="changeMainImage('SmartTie', 'tie3(2).jpeg', this)"
+      onclick="changeMainImage('SmartTie', 'ties2.jpg', this)"
     />
     <img
-      src="tie(2).jpeg"
+      src="ties3.jpg"
       class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
-      onclick="changeMainImage('SmartTie', 'tie(2).jpeg', this)"
+      onclick="changeMainImage('SmartTie', 'ties3.jpg', this)"
     />
   </div>
 
@@ -394,9 +415,9 @@
     <div>
       <h3 class="text-xl font-semibold mb-3">Contact</h3>
       <ul class="text-sm text-gray-400 space-y-2">
-        <li><i class="fas fa-map-marker-alt mr-2"></i>123 Web Street, Dhaka, Bangladesh</li>
-        <li><i class="fas fa-phone-alt mr-2"></i>+880 1234 567 890</li>
-        <li><i class="fas fa-envelope mr-2"></i>shariful@example.com</li>
+        <li><i class="fas fa-map-marker-alt mr-2"></i>Chawkbazar, Chattagram, Bangladesh</li>
+        <li><i class="fas fa-phone-alt mr-2"></i>+880 1316 785 389</li>
+        <li><i class="fas fa-envelope mr-2"></i>sharifislam02001@gmail.com</li>
       </ul>
     </div>
 
@@ -544,8 +565,24 @@
   });
 </script>
 
+<script>
+  // Mobile menu toggle
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Sync cart count in mobile menu (optional)
+  const cartCount = document.getElementById('cartCount');
+  const cartCountMobile = document.getElementById('cartCountMobile');
+  const observer = new MutationObserver(() => {
+    cartCountMobile.textContent = cartCount.textContent;
+  });
+  observer.observe(cartCount, { childList: true });
+</script>
+
 </body>
 </html>
-
-
+ 
 
