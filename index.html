@@ -47,25 +47,41 @@
 
 </head>
 <body class="bg-gray-800">
-
-  <!-- Navbar -->
+<!-- Navbar -->
 <header class="fixed top-0 left-0 w-full bg-gray-800 text-white py-4 z-50 shadow-md">
   <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Sharunaduu's Store</h1>
-    <nav class="space-x-4">
-      <a href="index.html" class="text-yellow-400">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <!-- Cart Icon -->
-        <button onclick="openCart()" class="ml-4 bg-green-600 px-3 py-1 rounded hover:bg-green-700">
-          Cart (<span id="cartCount">0</span>)
-        </button>
+    <!-- Site Name -->
+    <h1 class="text-2xl font-bold">Sharunduu's Store</h1>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-4 items-center">
+      <a href="index.html" class="text-yellow-300">Home</a>
+      <a href="products.html" class="hover:text-yellow-300">Products</a>
+      <a href="about.html" class="hover:text-yellow-400">About</a>
+      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+      <button onclick="openCart()" class="ml-4 bg-green-600 px-3 py-1 rounded hover:bg-green-700">
+        Cart (<span id="cartCount">0</span>)
+      </button>
     </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuToggle" class="md:hidden text-white text-2xl focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Links -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col bg-gray-700 px-6 py-4 space-y-3">
+    <a href="index.html" class="block text-yellow-300">Home</a>
+    <a href="products.html" class="block hover:text-yellow-300">Products</a>
+    <a href="about.html" class="block hover:text-yellow-400">About</a>
+    <a href="contact.html" class="block hover:text-yellow-300">Contact</a>
+    <button onclick="openCart()" class="w-full bg-green-600 px-3 py-2 rounded hover:bg-green-700 text-left">
+      Cart (<span id="cartCountMobile">0</span>)
+    </button>
   </div>
 </header>
-
-  <main class="bg-cover bg-center bg-no-repeat py-20 text-center" style="background-image: url('Style-Accessories-for-Men.jpg');">
+<main class="bg-cover bg-center bg-no-repeat py-20 text-center" style="background-image: url('Style-Accessories-for-Men.jpg');">
 
     <h2 class="text-2xl font-bold mb-4 text-white">Welcome To Our Shop</h2>
     <p class="text-lg text-gray-300">Explore modern gadgets, place orders, and enjoy smooth payments!</p>
@@ -101,7 +117,7 @@
 </h3>
 
   <img id="productImage" 
-       src="cap1.jpg" 
+       src="accesoris2.jpg" 
        alt="Product Preview"
        class="rounded-xl shadow-lg w-full max-w-md transition duration-700 ease-in-out">
 </div>
@@ -113,13 +129,13 @@
 <script>
   const images = [
     "cap3.jpeg",
-    "balt3.jpg",
+    "balt4.jpeg",
     "sunglass3.jpeg",
-    "tie4.jpeg",
-    "wallet2.jpeg",
-    "watch.jpg",
-    "shoes4.jpeg",
-    "beslet2.jpeg"
+    "ties1.jpeg",
+    "wallets3.jpeg",
+    "watch5.jpeg",
+    "shoess.jpg",
+    "beslet3.jpeg"
   ];
 
   let current = 0;
@@ -149,9 +165,9 @@
     <div>
       <h3 class="text-xl font-semibold mb-3">Contact</h3>
       <ul class="text-sm text-gray-400 space-y-2">
-        <li><i class="fas fa-map-marker-alt mr-2"></i>123 Web Street, Dhaka, Bangladesh</li>
-        <li><i class="fas fa-phone-alt mr-2"></i>+880 1234 567 890</li>
-        <li><i class="fas fa-envelope mr-2"></i>shariful@example.com</li>
+        <li><i class="fas fa-map-marker-alt mr-2"></i>Chawkbazar, Chattagram, Bangladesh</li>
+        <li><i class="fas fa-phone-alt mr-2"></i>+880 1316 785 389</li>
+        <li><i class="fas fa-envelope mr-2"></i>sharifislam02001@gmail.com</li>
       </ul>
     </div>
 
@@ -238,6 +254,23 @@
   document.getElementById("backToTopBtn").addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+</script>
+
+<script>
+  // Mobile menu toggle
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Sync cart count in mobile menu (optional)
+  const cartCount = document.getElementById('cartCount');
+  const cartCountMobile = document.getElementById('cartCountMobile');
+  const observer = new MutationObserver(() => {
+    cartCountMobile.textContent = cartCount.textContent;
+  });
+  observer.observe(cartCount, { childList: true });
 </script>
 
 </body>
