@@ -53,9 +53,9 @@
     <h2 class="text-4xl font-bold mb-8 text-center text-white">Our Products</h2>
 
 
-   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
+   <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-6  ">
 
-      <!-- Product Cards Go Here -->
+      <!-- Product Cards Go Here min-w-[768px] -->
 
     <!-- Product 1 -->
 
@@ -68,20 +68,21 @@
     alt="Smart Cap"
   />
 
-  <div class="flex justify-center gap-2 mb-4">
+  <div class="flex justify-center gap-2 mb-4 flex-nowrap overflow-x-auto sm:overflow-visible">
+
     <img
       src="caps1.jpeg"
-      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartCap', 'caps1.jpeg', this)"
     />
     <img
       src="cap3.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent  cursor-pointer"
       onclick="changeMainImage('SmartCap', 'cap3.jpeg', this)"
     />
     <img
       src="cap4.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartCap', 'cap4.jpeg', this)"
     />
   </div>
@@ -101,6 +102,7 @@
 
 <!-- Product 2 -->
 <div class="bg-white rounded-lg shadow p-4 text-center">
+  <!-- Main Image -->
   <img
     id="mainImage-SmartShoes"
     src="shoess.jpg"
@@ -108,24 +110,27 @@
     alt="Smart Shoes"
   />
 
-  <div class="flex justify-center gap-2 mb-4">
+  <!-- Thumbnails (fixed) -->
+  <div class="flex justify-center gap-2 mb-4 flex-nowrap overflow-x-auto sm:overflow-visible">
+
     <img
       src="shoess.jpg"
-      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartShoes', 'shoess.jpg', this)"
     />
     <img
       src="shoess2.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartShoes', 'shoess2.jpeg', this)"
     />
     <img
       src="shoess4.jpg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartShoes', 'shoess4.jpg', this)"
     />
   </div>
 
+  <!-- Product Info -->
   <h3 class="text-xl font-semibold">Smart Shoes</h3>
   <p class="text-gray-600">Price: $99</p>
   <button
@@ -136,6 +141,7 @@
   </button>
 </div>
 
+
 <!-- Product 3 -->
 <div class="bg-white rounded-lg shadow p-4 text-center">
   <img
@@ -145,20 +151,20 @@
     alt="Smart Wallet"
   />
 
-  <div class="flex justify-center gap-2 mb-4">
+  <div class="flex justify-center gap-2 mb-4 flex-nowrap overflow-x-auto sm:overflow-visible">
     <img
       src="wallet2.jpeg"
-      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+     class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartWallet', 'wallet2.jpeg', this)"
     />
     <img
       src="wallet3.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartWallet', 'wallet3.jpeg', this)"
     />
     <img
       src="wallet4.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartWallet', 'wallet4.jpeg', this)"
     />
   </div>
@@ -182,20 +188,20 @@
     alt="Smart Watch"
   />
 
-  <div class="flex justify-center gap-2 mb-4">
+  <div class="flex justify-center gap-2 mb-4 flex-nowrap overflow-x-auto sm:overflow-visible">
     <img
       src="watch2.jpeg"
-      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('smartwatch', 'watch2.jpeg', this)"
     />
     <img
       src="watch3.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('smartwatch', 'watch3.jpeg', this)"
     />
     <img
       src="watch4.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('smartwatch', 'watch4.jpeg', this)"
     />
   </div>
@@ -219,20 +225,20 @@
     alt="Smart Balt"
   />
 
-  <div class="flex justify-center gap-2 mb-4">
+  <div class="flex justify-center gap-2 mb-4 flex-nowrap overflow-x-auto sm:overflow-visible">
     <img
       src="balt1.jpg"
-      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartBalt', 'balt1.jpg', this)"
     />
     <img
       src="balt3.jpg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartBalt', 'balt3.jpg', this)"
     />
     <img
       src="balt4.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartBalt', 'balt4.jpeg', this)"
     />
   </div>
@@ -256,20 +262,20 @@
     alt="Smart Sunglasses"
   />
 
-  <div class="flex justify-center gap-2 mb-4">
+ <div class="flex justify-center gap-2 mb-4 flex-nowrap overflow-x-auto sm:overflow-visible">
     <img
       src="sunglass2.webp"
-      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartSunglasses', 'sunglass2.webp', this)"
     />
     <img
       src="sunglasss1.jpg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartSunglasses', 'sunglasss1.jpg', this)"
     />
     <img
       src="sunglass3.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartSunglasses', 'sunglass3.jpeg', this)"
     />
   </div>
@@ -293,20 +299,20 @@
     alt="Smart Tie"
   />
 
-  <div class="flex justify-center gap-2 mb-4">
+  <div class="flex justify-center gap-2 mb-4 flex-nowrap overflow-x-auto sm:overflow-visible">
     <img
       src="ties1.jpeg"
-      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartTie', 'ties1.jpeg', this)"
     />
     <img
       src="ties2.jpg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartTie', 'ties2.jpg', this)"
     />
     <img
       src="ties3.jpg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartTie', 'ties3.jpg', this)"
     />
   </div>
@@ -330,20 +336,20 @@
     alt="Smart Beslet"
   />
 
-  <div class="flex justify-center gap-2 mb-4">
+  <div class="flex justify-center gap-2 mb-4 flex-nowrap overflow-x-auto sm:overflow-visible">
     <img
       src="beslet2.jpeg"
-      class="w-16 h-16 object-cover border-2 border-blue-600 rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartBeslet', 'beslet2.jpeg', this)"
     />
     <img
       src="beslet3.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartBeslet', 'beslet3.jpeg', this)"
     />
     <img
       src="beslet4.jpeg"
-      class="w-16 h-16 object-cover border-2 border-transparent rounded cursor-pointer"
+      class="w-16 h-16 rounded-md object-cover border-2 border-transparent cursor-pointer"
       onclick="changeMainImage('SmartBeslet', 'beslet4.jpeg', this)"
     />
   </div>
@@ -589,4 +595,3 @@
 </body>
 </html>
  
-
